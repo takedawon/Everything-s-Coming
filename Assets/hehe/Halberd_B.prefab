@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4410770794541437253}
   - component: {fileID: 4410770794590545506}
   - component: {fileID: 757219158899197439}
-  - component: {fileID: 2519024004026164750}
+  - component: {fileID: 2282491008343233791}
   m_Layer: 0
   m_Name: Halberd_B
   m_TagString: halberd
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4410770794550796933}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 30, y: 8, z: 85}
+  m_LocalPosition: {x: -175.3, y: 30, z: -166}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -128,7 +128,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &2519024004026164750
+--- !u!65 &2282491008343233791
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

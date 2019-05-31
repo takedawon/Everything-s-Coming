@@ -22,17 +22,6 @@ public class rotateController : MonoBehaviour
         transform.Rotate(new Vector3(0, 0, 360) * Time.deltaTime);
         transform.position = Vector3.MoveTowards(transform.position, target - test, 0.2f);
 
-        if (transform.position == terrain.transform.position)
-        {
-            Destroy(this.obstacle);
-        }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Destroy(other);
-    }
-
-
 
 }

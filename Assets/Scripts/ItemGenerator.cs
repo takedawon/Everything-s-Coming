@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemGenerator : MonoBehaviour
 {
     public GameObject halberdPrefab;
-    float span = 1.0f;
+    float span = 5.0f;
     float delta = 0;
     // Start is called before the first frame update
 
@@ -16,7 +16,9 @@ public class ItemGenerator : MonoBehaviour
         if (this.delta > this.span)
         {
             this.delta = 0;
-            Instantiate(halberdPrefab);
+            for(int i=0; i<=16;i++) { 
+                Instantiate(halberdPrefab);
+            }
         }
     }
 }

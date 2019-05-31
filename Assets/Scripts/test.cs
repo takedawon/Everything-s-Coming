@@ -20,7 +20,7 @@ public class test : MonoBehaviour
     {
         if (other.gameObject.tag == "halberd")
         {
-            Destroy(other.gameObject);
+            Destroy(other.transform);
         }
     }
 }
