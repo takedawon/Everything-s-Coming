@@ -6,7 +6,7 @@ public class ItemGenerator : MonoBehaviour
 {
     public GameObject halberdPrefab;
     public List<GameObject> cube = new List<GameObject>();
-    float span = 5.0f;
+    float span = 10.0f;
     float delta = 0;
     // Start is called before the first frame update
     void Start()
@@ -77,6 +77,9 @@ public class ItemGenerator : MonoBehaviour
         {
             this.delta = 0;
             for(int i=0; i<=27;i++) { 
+                if(i==23 || i==15 || i==3)
+                    continue;
+               
                 Instantiate(halberdPrefab);
                 halberdPrefab.GetComponent<rotateController>().setPosition(1,cube[i].transform.position);
             }

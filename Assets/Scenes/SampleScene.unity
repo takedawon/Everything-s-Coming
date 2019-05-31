@@ -3731,7 +3731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1a4db0ff1182049a2b8ec1baa0d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  halberdPrefab: {fileID: 4410770794550796933, guid: 31cd23691a8555144abe688400e2ee89,
+  halberdPrefab: {fileID: 2249471130532938321, guid: 7f43ee872d325d042a78b544b6a747c2,
     type: 3}
   cube: []
 --- !u!4 &2109421570
