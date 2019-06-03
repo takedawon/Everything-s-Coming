@@ -36,4 +36,8 @@ public class rotateController : MonoBehaviour
         testPosition = b;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+    }
+
 }
