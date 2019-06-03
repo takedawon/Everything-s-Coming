@@ -27,6 +27,7 @@ public class rotateController : MonoBehaviour
         if(test != 0) {
             Vector3 test = new Vector3(0, 2, 0);
             transform.Rotate(new Vector3(0, 0, 360) * Time.deltaTime);
+            //Random.Range(1.0F,5.0F)
             transform.position = Vector3.MoveTowards(transform.position, testPosition, 0.3f);
         }
     }

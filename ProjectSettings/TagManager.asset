@@ -7,6 +7,7 @@ TagManager:
   - fail
   - halberd
   - terrain
+  - person
   layers:
   - Default
   - TransparentFX
