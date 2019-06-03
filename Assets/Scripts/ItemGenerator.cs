@@ -76,12 +76,12 @@ public class ItemGenerator : MonoBehaviour
         if (this.delta > this.span)
         {
             this.delta = 0;
-            for(int i=0; i<=27;i++) { 
+            for(int i=1; i<=28;i++) { 
                 if(i==23 || i==15 || i==3)
                     continue;
                
                 Instantiate(halberdPrefab);
-                halberdPrefab.GetComponent<rotateController>().setPosition(1,cube[i].transform.position);
+                halberdPrefab.GetComponent<rotateController>().setPosition(1,cube[i-1].transform.position, i);
             }
         }
     }

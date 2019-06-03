@@ -11,6 +11,7 @@ public class rotateController : MonoBehaviour
     public Vector3 testPosition = new Vector3();
 
     public int test=0;
+    public int cubeNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,14 +31,18 @@ public class rotateController : MonoBehaviour
         }
     }
 
-    public void setPosition(int a,Vector3 b)
+    public void setPosition(int a, Vector3 b, int i)
     {
         test = a;
         testPosition = b;
+        cubeNum = i;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        string cube = "place";
+        if(other.gameObject.name == cube+cubeNum)
+            Destroy(transform.gameObject);
     }
 
 }
