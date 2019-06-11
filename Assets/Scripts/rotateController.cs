@@ -42,8 +42,8 @@ public class rotateController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         string cube = "place";
-        if(other.gameObject.name == cube+cubeNum)
-            Destroy(transform.gameObject);
+        if (other.gameObject.name == cube + cubeNum)
+            Destroy(gameObject);
     }
 
 }

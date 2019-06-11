@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class Scene_Manager : MonoBehaviour
 {
+    public static bool gameOver;
     // Start is called before the first frame update
+    void Awake()
+    {
+        gameOver = false;
+    }
     void Start()
     {
         
@@ -13,14 +18,9 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "halberd")
+        if(gameOver && Input.GetKeyDown(KeyCode.Y))
         {
-            Destroy(other.transform);
+
         }
     }
 }
