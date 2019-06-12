@@ -90,7 +90,7 @@ public class ItemGenerator : MonoBehaviour
                 halberdPrefab.GetComponent<rotateController>().setPosition(1,cube[i-1].transform.position, i);
             }
         }
-        if (count > 5)
+        if (count > 5 && PlayerTrigger.isLive)
             SceneManager.LoadScene("GameScenes2"); // 라운드 2
             
     }

@@ -87,7 +87,7 @@ public class ItemGenerator3 : MonoBehaviour
                     continue;
                
                 Instantiate(halberdPrefab);
-                halberdPrefab.GetComponent<rotateController>().setPosition(1,cube[i-1].transform.position, i);
+                halberdPrefab.GetComponent<rotateController3>().setPosition(1,cube[i-1].transform.position, i);
             }
         }
         if (count > 5)
