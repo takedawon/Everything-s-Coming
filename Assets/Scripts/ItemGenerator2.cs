@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ItemGenerator : MonoBehaviour
+public class ItemGenerator2 : MonoBehaviour
 {
     public GameObject halberdPrefab;
     public List<GameObject> cube = new List<GameObject>();
-    float span = 7.0f;
+    float span = 6.0f;
     float delta = 0;
     int[] ran=new int[5];
     int count = 1;
@@ -81,18 +81,19 @@ public class ItemGenerator : MonoBehaviour
         {
             this.delta = 0;
             count++;
-            ran = GetRandomInt(5, 1, 28);
+            ran = GetRandomInt(3, 1, 28);
             for (int i=1; i<=28;i++) { 
-                if(i==ran[0] || i==ran[1] || i==ran[2] || i==ran[3] || i==ran[4])
+                if(i==ran[0] || i==ran[1] || i==ran[2])
                     continue;
                
                 Instantiate(halberdPrefab);
-                halberdPrefab.GetComponent<rotateController>().setPosition(1,cube[i-1].transform.position, i);
+                halberdPrefab.GetComponent<rotateController2>().setPosition(1,cube[i-1].transform.position, i);
             }
+            Debug.Log(count);
         }
-        if (count > 5)
-            SceneManager.LoadScene("GameScenes2"); // 라운드 2
-            
+        if (count > 5) {
+            SceneManager.LoadScene("GameScenes3"); // 라운드 2
+        }
     }
 
     public int[] GetRandomInt(int length, int min, int max)
