@@ -22,7 +22,7 @@ public class PlayerTrigger2 : MonoBehaviour
     void Update()
     {
         if (isLive == false && Input.GetKeyDown(KeyCode.G)) // 죽었다 + R키를 누른다 조건을 만족하면 
-            SceneManager.LoadScene("GameScenes");
+            SceneManager.LoadScene("GameScenes2");
 
     }
 

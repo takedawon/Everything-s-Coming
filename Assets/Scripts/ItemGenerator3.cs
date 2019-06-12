@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ItemGenerator3 : MonoBehaviour
 {
     public GameObject halberdPrefab;
+    public GameObject gameFinish;
     public List<GameObject> cube = new List<GameObject>();
     float span = 5.0f;
     float delta = 0;
@@ -72,6 +73,8 @@ public class ItemGenerator3 : MonoBehaviour
         cube.Add(cube27);
         cube.Add(cube28);
 
+
+        gameFinish.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -91,9 +94,12 @@ public class ItemGenerator3 : MonoBehaviour
             }
         }
         if (count > 5)
-            SceneManager.LoadScene("GameScenes3"); // 라운드 2
-            
-    }
+        {
+            gameFinish.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        }
 
     public int[] GetRandomInt(int length, int min, int max)
     {
